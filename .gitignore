@@ -1,0 +1,7 @@
+venv/
+__pycache__/
+.ipynb_checkpoints/
+data/raw/*.XPT
+data/processed/*.csv
+outputs/*.png
+outputs/*.pkl
