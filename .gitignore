@@ -1,7 +1,11 @@
-venv/
+.venv/
+
 __pycache__/
-.ipynb_checkpoints/
-data/raw/*.XPT
-data/processed/*.csv
-outputs/*.png
-outputs/*.pkl
+*/.ipynb_checkpoints/
+*/pyc
+
+data/raw/*
+data/processed/*
+*.db 
+
+outputs/*
