@@ -1,7 +1,7 @@
 from pathlib import Path
 import urllib.request
 
-Project_root = Path(__file__).parent.parent
+Project_root = Path(__file__).resolve().parents[1]
 Raw_data_dir = Project_root / 'data' / 'raw'
 Raw_data_dir.mkdir(parents=True, exist_ok=True)
 

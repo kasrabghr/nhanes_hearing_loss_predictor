@@ -9,3 +9,6 @@ data/processed/*
 *.db 
 
 outputs/*
+
+.env
+notes.txt
