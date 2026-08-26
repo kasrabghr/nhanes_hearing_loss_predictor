@@ -1,3 +1,5 @@
+create table nhanes_master_table as
+
 -- Audiological questionnaire
 with auq as (
 	select 
