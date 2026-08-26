@@ -8,6 +8,7 @@ from sqlalchemy import create_engine
 project_dir = Path(__file__).resolve().parents[1]   
 raw_data_dir = project_dir / "data" / "raw"
 
+# Load environment variables from .env file to connect to postgresSQL server
 load_dotenv(project_dir / ".env")
 
 DB_USER = os.getenv("DB_USER", "postgres")
@@ -19,6 +20,8 @@ DB_PORT = os.getenv("DB_PORT", "5432")
 DB_URI = f"postgresql+psycopg2://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
 engine = create_engine(DB_URI)
 
+
+#Table names from dataset 
 DATASETS = [
     "AUQ_I",
     "AUX_I",
@@ -41,6 +44,7 @@ def load_raw_to_postgres():
         print(f"Loading {file_path} into PostgreSQL...")
         df, meta = pyreadstat.read_xport(file_path)
 
+        #making columns lower case to be campatible with postgreSQL
         df.columns = [col.lower() for col in df.columns]
 
         table_name = f"{dataset.lower()}_raw"

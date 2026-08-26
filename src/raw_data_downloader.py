@@ -7,6 +7,7 @@ Raw_data_dir.mkdir(parents=True, exist_ok=True)
 
 dataset_url = "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles"
 
+#Tables from the NHANES dataset I intend to use for Features and target variables
 files = [
     "AUQ_I.XPT",
     "AUX_I.XPT",
