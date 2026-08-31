@@ -3,12 +3,12 @@
 ### Demographics
 - **seqn**: Respondent sequence number (Identifier)
 - **sex**: Biological sex
-  - `1`: Male
-  - `2`: Female
+  - `0`: Male
+  - `1`: Female
 - **age**: Age in years at screening (Continuous)
 - **military_service**: Active duty military service
-  - `1`: No
-  - `2`: Yes
+  - `0`: No
+  - `1`: Yes
 - **education**: Education level
   - `1`: Below High School
   - `2`: High School
@@ -40,7 +40,7 @@
 - **lead**: Blood lead concentration (ug/dL)
 - **cadmium**: Blood cadmium concentration (ug/L)
 
-### Medical Conditions (1 = No, 2 = Yes)
+### Medical Conditions (0 = No, 1 = Yes)
 - **heart_disease**: Coronary heart disease
 - **heart_attack**: Myocardial infarction
 - **stroke**: Stroke
