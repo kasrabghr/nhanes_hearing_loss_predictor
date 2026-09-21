@@ -1,0 +1,35 @@
+AUQ_I:
+AUQ300: Ever used firearms for any reason?
+AUQ310: How many total rounds ever fired?
+AUQ320: Wear hearing protection when shooting?
+AUQ331: Ever had a job exposure to loud noise?
+AUQ340: How long exposed to loud noise at work?
+AUQ370: Had off-work exposure to loud noise?
+
+BMI_I:
+BMXBMI: Body Mass Index (kg/m**2)
+
+BPX_I:
+Average of:
+BPXSY2: Systolic: Blood pres (2nd rdg) mm Hg
+BPXSY3: Systolic: Blood pres (3rd rdg) mm Hg
+
+DEMO_I:
+RIAGENDR: Gender
+RIDAGEYR: Age in years at screening
+DMQMILIZ: Served active duty in US Armed Forces
+DMDEDUC2: Education level - Adults 20+
+INDFMPIR: Ratio of family income to poverty
+
+DIQ_I:
+DIQ010: Doctor told you have diabetes
+
+MCQ_I:
+MCQ160C: Ever told you had coronary heart disease
+MCQ160E: Ever told you had heart attack
+MCQ160F: Ever told you had a stroke
+MCQ220: Ever told you have cancer
+
+PBCD_I:
+LBXBPB: Blood lead (ug/dL)
+LBXBCD: Blood cadmium (ug/L)
