@@ -59,6 +59,7 @@ Age is by far the strongest predictor, which makes sense with hearing loss being
 
 ## Project structure
 
+```text
 project/
 ├── data/
 │   ├── raw/                    # raw NHANES .XPT files + feature notes
@@ -81,6 +82,7 @@ project/
 ├── docker-compose.yml          # container setup for PostgreSQL
 ├── requirements.txt
 └── README.md
+```
 
 ## Limitations
 
