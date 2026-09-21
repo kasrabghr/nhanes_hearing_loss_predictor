@@ -67,7 +67,7 @@ project/
 │   ├── eda.ipynb
 │   ├── cleaning.ipynb
 │   └── feature_preparing.ipynb
-├── images/                    # confusion matrix, PR curve, model coefficients.
+├── images/                     # confusion matrix, PR curve, model coefficients
 ├── sql/
 │   ├── nhanes_master_table_query.sql
 │   └── data_dictionary.md
@@ -75,10 +75,10 @@ project/
 │   ├── raw_data_downloader.py
 │   ├── raw_data_to_postgress_loader.py
 │   └── processed_sql_to_csv.py
-├── .env                        # database credentials
+├── .env                        # local database credentials (git-ignored)
+├── .env.example                # template for database credentials
 ├── .gitignore
 ├── docker-compose.yml          # container setup for PostgreSQL
-├── Dockerfile                  # environment definition
 ├── requirements.txt
 └── README.md
 
@@ -92,3 +92,30 @@ This is a cross-sectional dataset which for our model it means that it finds ass
 *   **Database & Data Engineering:** PostgreSQL, Docker, SQLAlchemy, psycopg2, pyarrow, pyreadstat
 *   **Machine Learning & Stats:** scikit-learn, XGBoost, statsmodels, scipy, pandas, numpy
 *   **Visualization & EDA:** Matplotlib, Seaborn, missingno
+
+## Running this yourself
+
+1. Clone the repo, create a virtual environment, and install dependencies:
+   
+2. Create a `.env` file in the project root with your database credentials (you can copy `.env.example`):
+   
+3. Start the PostgreSQL database using Docker:
+   
+4. Run the data loading pipeline:
+   ```bash
+   python src/raw_data_downloader.py
+   python src/raw_data_to_postgress_loader.py
+   ```
+5. Run `sql/nhanes_master_table_query.sql` against the database (via pgAdmin or `psql` mapped to `localhost:5433`) to build the master feature table.
+6. Export the processed table to CSV:
+   ```bash
+   python src/processed_sql_to_csv.py
+   ```
+7. Run the notebooks in order: `eda.ipynb` → `cleaning.ipynb` → `feature_preparing.ipynb`.
+8. When finished, spin down the database container (your data is preserved in a Docker volume):
+   
+
+
+## Contact
+
+Kasra Bagherian - [kasra.bghr@gmail.com] · [[LinkedIn](https://www.linkedin.com/in/kasrabagherian/)] · [[GitHub](https://github.com/kasrabghr)]
